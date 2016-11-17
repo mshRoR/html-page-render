@@ -15,14 +15,10 @@ $(document).ready(function (){
   window.history.replaceState(null, null, link.split('.html')[0]);
 });
 
-$('a#home').click(function(){
-  var home = 'app/home.html';
-  pageRender(home);
-});
-
-$('a#about').click(function(){
-  var about = 'app/about.html';
-  pageRender(about);
+$('a.app-content').click(function(){
+  var page =  $(this).data('content');
+  var path = 'app/'+ page +'.html';
+  pageRender(path);
 });
 
 function pageRender(page){
