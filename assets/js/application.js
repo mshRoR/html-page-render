@@ -22,7 +22,7 @@ $(document).ready(function (){
       var viewNotice = $('<span>'+ notice[i] + '</span> <br />');
       $('div#notice').html(viewNotice);
       i++;
-      if (i == 5) {
+      if (i == notice.length) {
         i = 0;
       }
       myLoop();
